@@ -31,6 +31,7 @@ class EconomicReportView(PermissionRequiredMixin, TemplateView):
         context['summary'] = InvoiceRow.objects.filter(
             invoice__in=Invoice.objects.current()).report_summary()
         context['total_invoiced_amount'] = Invoice.objects.current().total_invoiced()
+        context['total_payed_amount'] = Invoice.objects.current().total_payed()
         context['fuzzy_matching_diff'] = Invoice.objects.current().payed().payed_diff()
 
         return context

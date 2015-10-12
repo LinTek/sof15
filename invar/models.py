@@ -95,6 +95,9 @@ class InvoiceQuerySet(models.QuerySet):
     def total_invoiced(self):
         return self.annotate_total().aggregate(sum=Sum('annotated_total'))['sum']
 
+    def total_payed(self):
+        return self.annotate_payed().aggregate(sum=Sum('annotated_payed'))['sum']
+
     def payed_diff(self):
         return -self.aggregate(diff=Sum(F('annotated_total') - F('annotated_payed')))['diff']
 

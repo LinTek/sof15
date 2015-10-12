@@ -6,13 +6,28 @@
 {% block header %}{% trans 'Economic report' %}{% endblock %}
 
 {% block content %}
-    <h2>{% trans 'Purchased products' %}</h2>
+    <h2>{% trans 'Summary' %}</h2>
+    <table class="table">
+        <tr>
+            <th>{% trans 'Total invoiced amount (for current invoices)' %}</th>
+            <td align="right">{{ total_invoiced_amount }}</td>
+        </tr>
+        <tr>
+            <th>{% trans 'Total payed amount (for current invoices)' %}</th>
+            <td align="right">{{ total_payed_amount }}</td>
+        </tr>
+        <tr>
+            <th>{% trans 'Diff due to fuzzy payment matching (for payed invoices)' %}</th>
+            <td align="right">{{ fuzzy_matching_diff }}</td>
+        </tr>
+    </table>
+    <h2>{% trans 'Product breakdown' %}</h2>
     <table class="table">
         <thead>
         <tr>
             <th>{% trans 'Product' %}</th>
             <th align="right">{% trans 'Price' %}</th>
-            <th align="right">{% trans 'Purchased quantity' %}</th>
+            <th align="right">{% trans 'Invoiced quantity' %}</th>
         </tr>
         </thead>
         <tbody>
@@ -25,15 +40,5 @@
         {% endfor %}
         </tbody>
     </table>
-    <h2>{% trans 'Other stats' %}</h2>
-    <table class="table">
-        <tr>
-            <th>{% trans 'Total invoiced amount' %}</th>
-            <td align="right">{{ total_invoiced_amount }}</td>
-        </tr>
-        <tr>
-            <th>{% trans 'Diff due to fuzzy payment matching (for payed invoices)' %}</th>
-            <td align="right">{{ fuzzy_matching_diff }}</td>
-        </tr>
-    </table>
+
 {% endblock %}
