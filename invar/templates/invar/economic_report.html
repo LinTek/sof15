@@ -13,7 +13,6 @@
             <th>{% trans 'Product' %}</th>
             <th align="right">{% trans 'Price' %}</th>
             <th align="right">{% trans 'Purchased quantity' %}</th>
-            <th align="right">{% trans 'Payed quantity' %}</th>
         </tr>
         </thead>
         <tbody>
@@ -22,7 +21,6 @@
             <th>{{ product.title }}</th>
             <td align="right">{{ product.price }}</td>
             <td align="right">{{ product.purchased_quantity }}</td>
-            <td align="right">TBD</td>
         </tr>
         {% endfor %}
         </tbody>
