@@ -92,6 +92,12 @@ class InvoiceQuerySet(models.QuerySet):
         return self.filter(invalidation__isnull=False,
                            invalidation__replacement__isnull=False)
 
+    def total_invoiced(self):
+        return self.annotate_total().aggregate(sum=Sum('annotated_total'))['sum']
+
+    def payed_diff(self):
+        return -self.aggregate(diff=Sum(F('annotated_total') - F('annotated_payed')))['diff']
+
     def remind(self):
         for i in self:
             i.remind()
@@ -118,6 +124,10 @@ class Invoice(models.Model):
 
     class Meta:
         ordering = ('pk',)
+
+        permissions = [
+            ['view_economic_report', _('Can view economic report')]
+        ]
 
         verbose_name = _('invoice')
         verbose_name_plural = _('invoices')
@@ -324,7 +334,8 @@ class PersonInvoiceHandle(models.Model):
 
 
 class InvoiceRowQuerySet(models.QuerySet):
-    pass
+    def report_summary(self):
+        return self.order_by('title', 'price').values('title', 'price', 'quantity').annotate(purchased_quantity=Sum('quantity'))
 
 
 class InvoiceRow(models.Model):

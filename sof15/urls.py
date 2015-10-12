@@ -6,6 +6,7 @@ from django.contrib.auth import views as auth_views
 
 from tickle.views.people import LoginView, ProfileView, ChangePasswordView, CreateUserView, IdentifyView
 from fungus.views import ShiftChangeView
+from invar.views import EconomicReportView
 
 urlpatterns = patterns(
     '',
@@ -28,6 +29,7 @@ urlpatterns = patterns(
     url(r'^orchard/', include('orchard.urls', namespace='orchard', app_name='orchard')),
     url(r'^fungus/', include('fungus.urls', namespace='fungus', app_name='fungus')),
     url(r'^tickets/', include('tickle.urls', namespace='tickle', app_name='tickle')),
+    url(r'^invar/economic-report/$', EconomicReportView.as_view(), name='economic_report'),
 
     url(r'^api/', include('api.urls', namespace='api')),
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
