@@ -2,7 +2,9 @@
 from django.conf import settings
 
 import requests
+from requests.adapters import HTTPAdapter
 from requests.exceptions import *
+import ssl
 
 API_URL = 'https://kobra.ks.liu.se/students/api.json'
 API_ACCEPTED_PARAMS = (
@@ -22,13 +24,21 @@ class Unauthorized(Exception):
     pass
 
 
+class KobraAdapter(HTTPAdapter):
+    def init_poolmanager(self, *args, **kwargs):
+        kwargs['ssl_version'] = ssl.PROTOCOL_TLSv1
+        requests.packages.urllib3.util.ssl_.DEFAULT_CIPHERS = 'RC4-SHA'
+        super(KobraAdapter, self).init_poolmanager(*args, **kwargs)
+
+
 class KobraClient(object):
     """
     A dead simple API client to KOBRA.
     """
     def __init__(self):
-        self.user = settings.KOBRA_USER
-        self.key = settings.KOBRA_KEY
+        self.session = requests.Session()
+        self.session.mount('https://', KobraAdapter())
+        self.session.auth = (settings.KOBRA_USER, settings.KOBRA_KEY)
 
     def get_student(self, timeout=5.0, **data):
         """
@@ -45,7 +55,7 @@ class KobraClient(object):
             # accepted.
             raise TypeError('Called with invalid argument(s) and/or wrong number of arguments.')
 
-        response = requests.post(API_URL, data=data, auth=(self.user, self.key), timeout=timeout)
+        response = self.session.post(API_URL, data=data, timeout=timeout)
 
         if response.status_code == 200:
             return response.json()
