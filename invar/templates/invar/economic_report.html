@@ -17,6 +17,10 @@
             <td align="right">{{ total_payed_amount }}</td>
         </tr>
         <tr>
+            <th>{% trans 'Total payed amount (for invalidated invoices)' %}</th>
+            <td align="right">{{ total_payed_invalidated_amount }}</td>
+        </tr>
+        <tr>
             <th>{% trans 'Diff due to fuzzy payment matching (for payed invoices)' %}</th>
             <td align="right">{{ fuzzy_matching_diff }}</td>
         </tr>
