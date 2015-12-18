@@ -7,7 +7,7 @@ from django.contrib.admin.helpers import ActionForm
 from django import forms
 from django.template.response import TemplateResponse
 
-from invar.models import Invoice, InvoiceRow, Transaction, TransactionMatch, InvoiceHandle, InvoiceInvalidation, HoldingInvoiceRow
+from invar.models import Invoice, InvoiceRow, Transaction, TransactionMatch, InvoiceHandle, InvoiceInvalidation, HoldingInvoiceRow, BgMaxImport
 from tickle.admin import AlwaysChangedModelForm
 from invar.views import BgMaxImportView
 from invar.forms import EmailInvoiceForm
@@ -156,6 +156,11 @@ class InvoiceAdmin(admin.ModelAdmin):
         self.message_user(request, _('Invoices invalidated.'))
 
     invalidate.short_description = _('Invalidate invoices')
+
+
+@admin.register(BgMaxImport)
+class BgMaxImportAdmin(admin.ModelAdmin):
+    list_display = ['file_name', 'import_timestamp', 'creation_timestamp']
 
 
 @admin.register(InvoiceInvalidation)
