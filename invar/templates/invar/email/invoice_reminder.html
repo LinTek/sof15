@@ -3,6 +3,25 @@
 <html>
 <body style="font-family: sans-serif;">
     <h1>{% trans 'Invoice reminder' %} #{{ invoice.pk }}</h1>
+    <p>
+      Hej kära besökare på SOF15,<br>
+      du får detta mail för att vi fortfarande inte fått in någon betalning från
+      dig för ditt köp av biljetter till Studentorkesterfestivalen i våras. Om
+      detta är första gången du får denna faktura så kan det bero på att en del
+      tidigare utskick fastnat i skräppostfilter.
+    </p>
+    <p>
+      Betalning sker via vårt bankgiro med OCR-numret nedan. Vi har inte gett
+      dig någon påminnelseavgift.
+    </p>
+    <p>
+      Om du har några frågor angående din faktura kan du höra av dig till Vice
+      Kårordförande på LinTek via
+      <a href="mailto:vko@lintek.liu.se">vko@lintek.liu.se</a>.
+    </p>
+    <p>
+
+    </p>
     <table>
         <tr>
             <th align="left">{% trans 'Invoice amount' %}:</th>
@@ -95,15 +114,5 @@
             <td align="right">{{ invoice.total }}</td>
         </tr>
     </table>
-    <p>
-        {% trans "Questions? Something's not right? Please contact us by replying to this email." %}
-    </p>
-    <p>
-        <strong>{% trans 'See you at SOF!' %}</strong><br>
-        //{% trans 'The SOF15 organisation' %}
-    </p>
-    <p>
-        <small>PS. <a href="http://tagga.sof15.se">Tagga SOF!</a></small>
-    </p>
 </body>
 </html>

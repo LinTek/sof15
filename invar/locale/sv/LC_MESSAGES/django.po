@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SOF15/Invar\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-18 12:52+0200\n"
+"POT-Creation-Date: 2016-02-24 13:57+0100\n"
 "PO-Revision-Date: 2015-05-10 09:09+0100\n"
 "Last-Translator: Olle Vidner <olle@vidner.se>\n"
 "Language-Team: SOF15 <it-utskottet@sof15.se>\n"
@@ -63,6 +63,7 @@ msgid "Resend invoice (Used for lost invoices)."
 msgstr "Skicka faktura igen (Används för borttappade fakturor)."
 
 #: invar/admin.py:135
+#, python-format
 msgid "Invoices sent to %s."
 msgstr "Faktura skickade till %s."
 
@@ -86,192 +87,196 @@ msgstr "Fakturor makulerade."
 msgid "Invalidate invoices"
 msgstr "Makulera fakturor"
 
-#: invar/admin.py:174
+#: invar/admin.py:179
 msgid "matched"
 msgstr "matchad"
 
-#: invar/admin.py:180
+#: invar/admin.py:185
 msgid "Yes"
 msgstr "Ja"
 
-#: invar/admin.py:181
+#: invar/admin.py:186
 msgid "No"
 msgstr "Nej"
 
-#: invar/admin.py:219
+#: invar/admin.py:224
 msgid "Successfully matched by OCR."
 msgstr ""
 
-#: invar/admin.py:221
+#: invar/admin.py:226
 msgid "Match by OCR"
 msgstr ""
 
-#: invar/models.py:106
+#: invar/models.py:115
 msgid "receiver name"
 msgstr "mottagarens namn"
 
-#: invar/models.py:107
+#: invar/models.py:116
 msgid "receiver organisation"
 msgstr "mottagarens organisation"
 
-#: invar/models.py:108
+#: invar/models.py:117
 msgid "receiver PID"
 msgstr "mottagarens person-/organisationsnummer"
 
-#: invar/models.py:109
+#: invar/models.py:118
 msgid "receiver email address"
 msgstr "mottagarens e-postadress"
 
-#: invar/models.py:111
+#: invar/models.py:120
 msgid "issue date"
 msgstr "fakturadatum"
 
-#: invar/models.py:112
+#: invar/models.py:121
 msgid "due date"
 msgstr "förfallodatum"
 
-#: invar/models.py:114
+#: invar/models.py:123
 msgid "reminder issue date"
 msgstr "påminnelsedatum"
 
-#: invar/models.py:115
+#: invar/models.py:124
 msgid "reminder due date"
 msgstr "påminnelseförfallodatum"
 
-#: invar/models.py:122 invar/models.py:282 invar/models.py:301
-#: invar/models.py:331
+#: invar/models.py:132
+msgid "Can view economic report"
+msgstr ""
+
+#: invar/models.py:135 invar/models.py:295 invar/models.py:314
+#: invar/models.py:345
 msgid "invoice"
 msgstr "faktura"
 
-#: invar/models.py:123
+#: invar/models.py:136
 msgid "invoices"
 msgstr "fakturor"
 
-#: invar/models.py:281 invar/models.py:396
+#: invar/models.py:294 invar/models.py:410
 msgid "timestamp"
 msgstr "tidsstämpel"
 
-#: invar/models.py:283
+#: invar/models.py:296
 msgid "replacement invoice"
 msgstr "ersättande faktura"
 
-#: invar/models.py:286
+#: invar/models.py:299
 msgid "invoice invalidation"
 msgstr "fakturamakulering"
 
-#: invar/models.py:287
+#: invar/models.py:300
 msgid "invoice invalidations"
 msgstr "fakturamakuleringar"
 
-#: invar/models.py:306 invar/models.py:426
+#: invar/models.py:319 invar/models.py:440
 msgid "invoice handle"
 msgstr "fakturakoppling"
 
-#: invar/models.py:307
+#: invar/models.py:320
 msgid "invoice handles"
 msgstr "fakturorkopplingar"
 
-#: invar/models.py:318
+#: invar/models.py:331
 msgid "handle"
 msgstr "koppling"
 
-#: invar/models.py:319 invar/models.py:334
+#: invar/models.py:332 invar/models.py:348
 msgid "person"
 msgstr "person"
 
-#: invar/models.py:322
+#: invar/models.py:335
 msgid "personal invoice handle"
 msgstr "personlig fakturakoppling"
 
-#: invar/models.py:323
+#: invar/models.py:336
 msgid "personal invoice handles"
 msgstr "personliga fakturakopplingar"
 
-#: invar/models.py:332
+#: invar/models.py:346
 msgid "title"
 msgstr "titel"
 
-#: invar/models.py:333
+#: invar/models.py:347
 msgid "description"
 msgstr "beskrivning"
 
-#: invar/models.py:335
+#: invar/models.py:349
 msgid "quantity"
 msgstr "kvantitet"
 
-#: invar/models.py:336
+#: invar/models.py:350
 msgid "price"
 msgstr "pris"
 
-#: invar/models.py:341 invar/models.py:377
+#: invar/models.py:355 invar/models.py:391
 msgid "invoice row"
 msgstr "fakturarad"
 
-#: invar/models.py:342
+#: invar/models.py:356
 msgid "invoice rows"
 msgstr "fakturarader"
 
-#: invar/models.py:378
+#: invar/models.py:392
 msgid "holding"
 msgstr "ägandeskap"
 
-#: invar/models.py:383
+#: invar/models.py:397
 msgid "holding invoice row"
 msgstr "fakturarad för ägandeskap"
 
-#: invar/models.py:384
+#: invar/models.py:398
 msgid "holding invoice rows"
 msgstr "fakturarader för ägandeskap"
 
-#: invar/models.py:397
+#: invar/models.py:411
 msgid "amount"
 msgstr "belopp"
 
-#: invar/models.py:398
+#: invar/models.py:412
 msgid "reference"
 msgstr "referens"
 
-#: invar/models.py:399
+#: invar/models.py:413
 msgid "unique identifier"
 msgstr "unikt ID"
 
-#: invar/models.py:404 invar/models.py:425
+#: invar/models.py:418 invar/models.py:439
 msgid "transaction"
 msgstr "transaktion"
 
-#: invar/models.py:405
+#: invar/models.py:419
 msgid "transactions"
 msgstr "transaktioner"
 
-#: invar/models.py:429
+#: invar/models.py:443
 msgid "transaction match"
 msgstr "transaktionsmatchning"
 
-#: invar/models.py:430
+#: invar/models.py:444
 msgid "transaction matches"
 msgstr "transaktionsmatchningar"
 
-#: invar/models.py:434
+#: invar/models.py:448
 msgid "file name"
 msgstr "filnamn"
 
-#: invar/models.py:435
+#: invar/models.py:449
 msgid "file SHA1"
 msgstr ""
 
-#: invar/models.py:436
+#: invar/models.py:450
 msgid "import timestamp"
 msgstr "importerad"
 
-#: invar/models.py:437
+#: invar/models.py:451
 msgid "creation timestamp"
 msgstr "skapad"
 
-#: invar/models.py:442
+#: invar/models.py:456
 msgid "BgMax import"
 msgstr ""
 
-#: invar/models.py:443
+#: invar/models.py:457
 msgid "BgMax imports"
 msgstr ""
 
@@ -283,6 +288,55 @@ msgstr ""
 #: invar/templates/admin/invar/transaction/import_bgmax.html:9
 msgid "Import"
 msgstr "Importera"
+
+#: invar/templates/invar/economic_report.html:4
+#: invar/templates/invar/economic_report.html:6
+msgid "Economic report"
+msgstr ""
+
+#: invar/templates/invar/economic_report.html:9
+msgid "Summary"
+msgstr ""
+
+#: invar/templates/invar/economic_report.html:12
+msgid "Total invoiced amount (for current invoices)"
+msgstr ""
+
+#: invar/templates/invar/economic_report.html:16
+msgid "Total payed amount (for current invoices)"
+msgstr ""
+
+#: invar/templates/invar/economic_report.html:20
+msgid "Total payed amount (for invalidated invoices)"
+msgstr ""
+
+#: invar/templates/invar/economic_report.html:24
+msgid "Diff due to fuzzy payment matching (for payed invoices)"
+msgstr ""
+
+#: invar/templates/invar/economic_report.html:28
+msgid "Product breakdown"
+msgstr ""
+
+#: invar/templates/invar/economic_report.html:32
+#: invar/templates/invar/email/invoice.html:62
+#: invar/templates/invar/email/invoice_reminder.html:97
+#: invar/templates/invar/email/invoice_update.html:65
+msgid "Product"
+msgstr "Produkt"
+
+#: invar/templates/invar/economic_report.html:33
+#: invar/templates/invar/email/invoice.html:64
+#: invar/templates/invar/email/invoice_reminder.html:99
+#: invar/templates/invar/email/invoice_update.html:67
+msgid "Price"
+msgstr "Pris"
+
+#: invar/templates/invar/economic_report.html:34
+#, fuzzy
+#| msgid "Invoice amount"
+msgid "Invoiced quantity"
+msgstr "Fakturasumma"
 
 #: invar/templates/invar/email/invoice.html:5
 #: invar/templates/invar/email/invoice_invalidation_subject.txt:1
@@ -296,115 +350,102 @@ msgid "Amount to pay"
 msgstr "Belopp att betala"
 
 #: invar/templates/invar/email/invoice.html:12
-#: invar/templates/invar/email/invoice_reminder.html:20
+#: invar/templates/invar/email/invoice_reminder.html:39
 #: invar/templates/invar/email/invoice_update.html:15
 msgid "OCR reference number"
 msgstr "OCR-nummer"
 
 #: invar/templates/invar/email/invoice.html:16
-#: invar/templates/invar/email/invoice_reminder.html:24
+#: invar/templates/invar/email/invoice_reminder.html:43
 #: invar/templates/invar/email/invoice_update.html:19
 msgid "Bankgiro number"
 msgstr "Bankgironummer"
 
 #: invar/templates/invar/email/invoice.html:20
-#: invar/templates/invar/email/invoice_reminder.html:28
+#: invar/templates/invar/email/invoice_reminder.html:47
 #: invar/templates/invar/email/invoice_update.html:23
 msgid "Invoice issued"
 msgstr "Fakturadatum"
 
 #: invar/templates/invar/email/invoice.html:24
-#: invar/templates/invar/email/invoice_reminder.html:32
+#: invar/templates/invar/email/invoice_reminder.html:51
 #: invar/templates/invar/email/invoice_update.html:27
 msgid "Payment due"
 msgstr "Förfallodatum"
 
 #: invar/templates/invar/email/invoice.html:28
-#: invar/templates/invar/email/invoice_reminder.html:44
+#: invar/templates/invar/email/invoice_reminder.html:63
 #: invar/templates/invar/email/invoice_update.html:31
 msgid "Receiver"
 msgstr "Mottagare"
 
 #: invar/templates/invar/email/invoice.html:31
-#: invar/templates/invar/email/invoice_reminder.html:47
+#: invar/templates/invar/email/invoice_reminder.html:66
 #: invar/templates/invar/email/invoice_update.html:34
 msgid "Name"
 msgstr "Namn"
 
 #: invar/templates/invar/email/invoice.html:36
-#: invar/templates/invar/email/invoice_reminder.html:52
+#: invar/templates/invar/email/invoice_reminder.html:71
 #: invar/templates/invar/email/invoice_update.html:39
 msgid "Organisation"
 msgstr "Organisation"
 
 #: invar/templates/invar/email/invoice.html:42
-#: invar/templates/invar/email/invoice_reminder.html:58
+#: invar/templates/invar/email/invoice_reminder.html:77
 #: invar/templates/invar/email/invoice_update.html:45
 msgid "Personal/Organisational identification number"
 msgstr "Person-/organisationsnummer"
 
 #: invar/templates/invar/email/invoice.html:47
-#: invar/templates/invar/email/invoice_reminder.html:63
+#: invar/templates/invar/email/invoice_reminder.html:82
 #: invar/templates/invar/email/invoice_update.html:50
 msgid "International payment info"
 msgstr "Information för internationella betalningar"
 
 #: invar/templates/invar/email/invoice.html:50
-#: invar/templates/invar/email/invoice_reminder.html:66
+#: invar/templates/invar/email/invoice_reminder.html:85
 #: invar/templates/invar/email/invoice_update.html:53
 msgid "IBAN"
 msgstr "IBAN"
 
 #: invar/templates/invar/email/invoice.html:54
-#: invar/templates/invar/email/invoice_reminder.html:70
+#: invar/templates/invar/email/invoice_reminder.html:89
 #: invar/templates/invar/email/invoice_update.html:57
 msgid "BIC/SWIFT"
 msgstr "BIC/SWIFT"
 
 #: invar/templates/invar/email/invoice.html:59
-#: invar/templates/invar/email/invoice_reminder.html:75
+#: invar/templates/invar/email/invoice_reminder.html:94
 #: invar/templates/invar/email/invoice_update.html:62
 msgid "Specification"
 msgstr "Specifikation"
 
-#: invar/templates/invar/email/invoice.html:62
-#: invar/templates/invar/email/invoice_reminder.html:78
-#: invar/templates/invar/email/invoice_update.html:65
-msgid "Product"
-msgstr "Produkt"
-
 #: invar/templates/invar/email/invoice.html:63
-#: invar/templates/invar/email/invoice_reminder.html:79
+#: invar/templates/invar/email/invoice_reminder.html:98
 #: invar/templates/invar/email/invoice_update.html:66
 msgid "Person"
 msgstr "Person"
 
-#: invar/templates/invar/email/invoice.html:64
-#: invar/templates/invar/email/invoice_reminder.html:80
-#: invar/templates/invar/email/invoice_update.html:67
-msgid "Price"
-msgstr "Pris"
-
 #: invar/templates/invar/email/invoice.html:65
-#: invar/templates/invar/email/invoice_reminder.html:81
+#: invar/templates/invar/email/invoice_reminder.html:100
 #: invar/templates/invar/email/invoice_update.html:68
 msgid "Quantity"
 msgstr "Kvantitet"
 
 #: invar/templates/invar/email/invoice.html:66
-#: invar/templates/invar/email/invoice_reminder.html:82
+#: invar/templates/invar/email/invoice_reminder.html:101
 #: invar/templates/invar/email/invoice_update.html:69
 msgid "Subtotal"
 msgstr "Subtotal"
 
 #: invar/templates/invar/email/invoice.html:78
-#: invar/templates/invar/email/invoice_reminder.html:94
+#: invar/templates/invar/email/invoice_reminder.html:113
 #: invar/templates/invar/email/invoice_update.html:81
 msgid "Total"
 msgstr "Totalt"
 
 #: invar/templates/invar/email/invoice.html:83
-#: invar/templates/invar/email/invoice_reminder.html:99
 #: invar/templates/invar/email/invoice_update.html:86
 msgid ""
 "Questions? Something's not right? Please contact us by replying to this "
@@ -414,14 +455,12 @@ msgstr ""
 "här mailet."
 
 #: invar/templates/invar/email/invoice.html:86
-#: invar/templates/invar/email/invoice_reminder.html:102
 #: invar/templates/invar/email/invoice_update.html:89
 msgid "See you at SOF!"
 msgstr "Vi ses på SOF!"
 
 #: invar/templates/invar/email/invoice.html:87
 #: invar/templates/invar/email/invoice_invalidation.html:13
-#: invar/templates/invar/email/invoice_reminder.html:103
 #: invar/templates/invar/email/invoice_update.html:90
 msgid "The SOF15 organisation"
 msgstr "SOF-organisationen 2015"
@@ -450,25 +489,25 @@ msgstr "makulerad"
 #: invar/templates/invar/email/invoice_reminder.html:5
 #: invar/templates/invar/email/invoice_reminder_subject.txt:1
 msgid "Invoice reminder"
-msgstr "Fakturapåminnelse"
+msgstr "Faktura/Påminnelse"
 
-#: invar/templates/invar/email/invoice_reminder.html:8
+#: invar/templates/invar/email/invoice_reminder.html:27
 msgid "Invoice amount"
 msgstr "Fakturasumma"
 
-#: invar/templates/invar/email/invoice_reminder.html:12
+#: invar/templates/invar/email/invoice_reminder.html:31
 msgid "Amount payed"
 msgstr "Erlagt belopp"
 
-#: invar/templates/invar/email/invoice_reminder.html:16
+#: invar/templates/invar/email/invoice_reminder.html:35
 msgid "Amount left to pay"
 msgstr "Kvar att betala"
 
-#: invar/templates/invar/email/invoice_reminder.html:36
+#: invar/templates/invar/email/invoice_reminder.html:55
 msgid "Reminder issued"
 msgstr "Påminnelsedatum"
 
-#: invar/templates/invar/email/invoice_reminder.html:40
+#: invar/templates/invar/email/invoice_reminder.html:59
 msgid "Reminder due"
 msgstr "Betalning oss tillhanda senast"
 
@@ -481,7 +520,7 @@ msgstr "Fakturaändring"
 msgid "Your invoice has been changed. Please review the details below."
 msgstr "Din faktura har ändrats. Vänligen kontrollera uppgifterna nedan."
 
-#: invar/views.py:17
+#: invar/views.py:20
 msgid "Successfully imported transactions from BgMax file."
 msgstr ""
 
